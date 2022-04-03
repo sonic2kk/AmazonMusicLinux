@@ -136,7 +136,7 @@ rm -rf "$HOME/Desktop/Amazon Music.lnk"
 rm -rf "$HOME/Desktop/Amazon Music.desktop"
 echo "[Desktop Entry]
 Name=Amazon Music
-Exec=env WINEPREFIX=\"$winepfx\" $wineprog C:\\\\\\\\users\\\\\\\\emma\\\\\\\\AppData\\\\\\\\Roaming\\\\\\\\Microsoft\\\\\\\\Windows\\\\\\\\Start\\\\ Menu\\\\\\\\Programs\\\\\\\\Amazon\\\\ Music\\\\\\\\Amazon\\\\ Music.lnk
+Exec=env WINEPREFIX=\"$winepfx\" $wineprog C:\\\\\\\\users\\\\\\\\$USER\\\\\\\\AppData\\\\\\\\Roaming\\\\\\\\Microsoft\\\\\\\\Windows\\\\\\\\Start\\\\ Menu\\\\\\\\Programs\\\\\\\\Amazon\\\\ Music\\\\\\\\Amazon\\\\ Music.lnk
 Type=Application
 StartupNotify=true
 Icon=$HOME/.local/share/icons/hicolor/256x256/apps/0068_Amazon Music.0.png
