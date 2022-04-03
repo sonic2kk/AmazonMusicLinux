@@ -1,6 +1,8 @@
 # Amazon Music Installer for Linux
 This Bash script installs the Amazon Music Desktop App for Linux running through [Wine-GE](https://github.com/GloriousEggroll/wine-ge-custom) with some extra fonts and a `.desktop` file for system integration by default.
 
+[![Screenshot-20220403-164950.png](https://i.postimg.cc/ncFxrCc1/Screenshot-20220403-164950.png)](https://postimg.cc/HjhRPWMJ)
+
 The release of Wine-GE used has been chosen as it works the best in my testing. It may not be the latest release but it should give the most stable. It may be bumped from time to time.
 
 ## Features
@@ -14,10 +16,21 @@ As this is the native Windows Amazon Music desktop app running through Wine, you
 - Ultra HD music playback
 - Offline playback
 - Automatic updates
+- Podcasts
+- Drag & Drop functionality for playlists
 
+HD/Ultra HD music playback can be somewhat CPU intensive on some systems, reaching 10-15% usage. Unconfirmed if this is the case on Windows too. 
+
+## Known bugs
 Unfortunately, there are some missing features due to limitations in Wine:
 - Media keys - Wine audio playback does not integrate into the system, so it cannot use media keys right now
 - Amazon's Ember WOFF2 font is not used throughout the entire app, though it is used in some places. It may fall back to an ugly font depending on your system!
+- Touchpad gestures on Wayland may cause the app to crash, this happens with various Wine applications and cannot be fixed here to my knowledge
+
+Likewise, there are a few bugs that hopefully can be fixed in the future:
+- System tray icon does not always disappear
+- Application usually **does not** exit cleanly, leaving behind several Amazon, wineserver.exe and various other executable processes.
+  - Searching for `Amazon`, `wine`, `python3` and `.exe` in your task manager of choice and manually killing these processes should suffice.
 
 ## Dependencies
 The script should run on any major Linux desktop, though there are a few dependencies that must be met for the script to run properly:
@@ -52,6 +65,7 @@ The Uninstall executable installed with Amazon Music has not been tested and wil
 ## Planned Features
 There are a number of planned features I hope to get around to:
 - Add flags for various options, such as using an existing prefix, or an existing Wine version
+- Investigate ways of handling a smooth shutdown, potentially with a wrapper launch script
 - Ability to "reinstall" if parent directory changes
 - Better checking for existing prefix, existing winetricks font installation, so that a reinstall can go much faster
 - Better error handling
@@ -59,6 +73,11 @@ There are a number of planned features I hope to get around to:
 
 ## Contributing
 Contributions are welcome from anyone! If there are any bugs, dead links, or extra features that could be added (such as more fonts) feel free to open an issue or a pull request. If links or versions need bumped, feel free to open an issue about that too. And of course, any help with the planned features would be appreciated as well.
+
+## Special thanks
+A few special thanks:
+- [GloriousEggroll](https://github.com/GloriousEggroll/) for creating, maintaining and constantly working on Wine-GE
+- All Wine contributers and maintainers
 
 ## License
 This script is Free Software under the permissive MIT license. See LICENSE for further information.
