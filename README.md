@@ -1,3 +1,5 @@
+# PROJECT IS OBSELETE - You can get virtually identical ressults with Bottles
+
 # Amazon Music Installer for Linux
 This Bash script installs the Amazon Music Desktop App for Linux running through [Wine-GE](https://github.com/GloriousEggroll/wine-ge-custom) with some extra fonts and a `.desktop` file for system integration by default.
 
